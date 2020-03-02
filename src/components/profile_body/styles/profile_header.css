@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "kaushan";
+    src: url("/fonts/kaushan.otf");
+    /* src: url("kaushan.woff") format("woff"),
+    url("kaushan.otf") format("opentype"),
+    url("kaushan.svg#filename") format("svg"); */
+}
+
+.title{
+    font-family: kaushan;
+    font-style: italic;
+    line-height: 100vh;
+    font-size: 300%;
+    color: #FFFFFF;
+    /* background: #ece9e9; */
+    text-shadow: 3px 5px 2px #474747;
+}
+
+.layer_0{
+    max-width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+
+.layer_1{
+    max-width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+
+.layer_2{
+    max-width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+
+/* .parallax-section{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+} */
+
+/* header{
+    height: 10px;
+} */

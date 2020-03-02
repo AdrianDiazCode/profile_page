@@ -1,0 +1,12 @@
+.translatable-label{
+    display: inline;
+}
+
+.typed-cursor--blink{
+    display: none;
+}
+/* .typed-cursor{
+    background-color: red;
+    color: blue;
+    display: inline;
+} */

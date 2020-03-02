@@ -1,0 +1,44 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+}
+
+@media(orientation:landscape) {
+    #content {
+        right: 0;
+        width: 50%;
+    }
+}
+
+@media(orientation:portrait) {
+    #content {
+        width: 100%;
+    }
+}
+
+.snap-element {
+    scroll-snap-align: start;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    color: white;
+    /* line-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(orientation:portrait) {
+    section {
+        padding-top: 20%;
+    }
+}

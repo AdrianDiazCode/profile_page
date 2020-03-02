@@ -1,0 +1,58 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    z-index: 10000000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navbar-collapse {
+    float: right;
+}
+
+/* #lang-dropdown-container{
+    display: grid;
+    grid-template-columns: repeat(3.1fr);
+} */
+
+#lang-dropdown {
+    height: 100%;
+}
+
+#langs-container {
+    display: grid;
+    height: 100%;
+}
+
+#langs-container>a {
+    height: 100%;
+}
+
+.lang-text {
+    padding-left: 10%;
+}
+
+#current-lang-img, .lang-img {
+    max-height: 30px;
+    max-width: 50%;
+}
+
+#lang-dropdown-container{
+    position: absolute;
+}
+
+
+@media(orientation:portrait){
+    #current-lang-img
+    {
+        
+    }
+}
