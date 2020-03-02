@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/profile_page/static/css/main.3d0d45ac.chunk.css",
-    "main.js": "/profile_page/static/js/main.705a2243.chunk.js",
-    "main.js.map": "/profile_page/static/js/main.705a2243.chunk.js.map",
+    "main.css": "/profile_page/static/css/main.ec55a284.chunk.css",
+    "main.js": "/profile_page/static/js/main.3aa2737f.chunk.js",
+    "main.js.map": "/profile_page/static/js/main.3aa2737f.chunk.js.map",
     "runtime-main.js": "/profile_page/static/js/runtime-main.208dad69.js",
     "runtime-main.js.map": "/profile_page/static/js/runtime-main.208dad69.js.map",
     "static/js/2.04aa403d.chunk.js": "/profile_page/static/js/2.04aa403d.chunk.js",
     "static/js/2.04aa403d.chunk.js.map": "/profile_page/static/js/2.04aa403d.chunk.js.map",
     "index.html": "/profile_page/index.html",
-    "precache-manifest.386466e26b069508fad40f55013e8daa.js": "/profile_page/precache-manifest.386466e26b069508fad40f55013e8daa.js",
+    "precache-manifest.e9432db2abd5964a76aa312f614389bb.js": "/profile_page/precache-manifest.e9432db2abd5964a76aa312f614389bb.js",
     "service-worker.js": "/profile_page/service-worker.js",
-    "static/css/main.3d0d45ac.chunk.css.map": "/profile_page/static/css/main.3d0d45ac.chunk.css.map",
+    "static/css/main.ec55a284.chunk.css.map": "/profile_page/static/css/main.ec55a284.chunk.css.map",
     "static/media/Layout_butterflies_1.png": "/profile_page/static/media/Layout_butterflies_1.d7de6f9f.png",
     "static/media/Layout_butterflies_2.png": "/profile_page/static/media/Layout_butterflies_2.f3c9af2e.png",
     "static/media/Layout_butterflies_3.png": "/profile_page/static/media/Layout_butterflies_3.4c01950b.png",
@@ -23,7 +23,7 @@
     "static/media/d3js.png": "/profile_page/static/media/d3js.27406b92.png",
     "static/media/down_arrow.svg": "/profile_page/static/media/down_arrow.aa9362ab.svg",
     "static/media/eng.png": "/profile_page/static/media/eng.522cd947.png",
-    "static/media/ger.png": "/profile_page/static/media/ger.02a55436.png",
+    "static/media/ger.png": "/profile_page/static/media/ger.a987d87d.png",
     "static/media/laravel.svg": "/profile_page/static/media/laravel.b8b31805.svg",
     "static/media/left_arrow.6a56ba04.svg": "/profile_page/static/media/left_arrow.6a56ba04.svg",
     "static/media/letter.png": "/profile_page/static/media/letter.6b6b08a5.png",
@@ -40,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.208dad69.js",
     "static/js/2.04aa403d.chunk.js",
-    "static/css/main.3d0d45ac.chunk.css",
-    "static/js/main.705a2243.chunk.js"
+    "static/css/main.ec55a284.chunk.css",
+    "static/js/main.3aa2737f.chunk.js"
   ]
 }
