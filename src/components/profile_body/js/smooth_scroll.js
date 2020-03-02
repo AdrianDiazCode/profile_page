@@ -50,14 +50,17 @@ function blink(){
 }
 
 function wheel(event) {
+    // console.log("wheel");
     // blink()
-    document.documentElement.style.scrollBehavior = 'auto';
     if (event.preventDefault) event.preventDefault();
+    document.documentElement.style.scrollBehavior = 'auto';
     event.returnValue = false;
     var delta = 0;
     if (event.wheelDelta) delta = event.wheelDelta / 120;
     else if (event.detail) delta = -event.detail / 3;
-
+    else if (event.deltaY) delta = - event.deltaY/12;
+    // console.log("event:",event);
+    // console.log("wheel-delta:",event.deltaY);
     handle(delta, event);
 }
 

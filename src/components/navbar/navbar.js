@@ -1,10 +1,10 @@
-
 import React, { Component } from 'react';
 import "./navbar.css";
 import { connect } from 'react-redux'
 // import store from '../../redux/store';
 import change_language from '../../redux/actions/change_language';
 import TranslatableLabel from '../translatable_label/translatable_label';
+import $ from 'jquery';
 
 const eng_img = require('./imgs/eng.png');
 const spa_img = require('./imgs/spa.png');
@@ -19,6 +19,21 @@ const imgs_dict = {
 class NavBar extends Component {
     state = {};
     componentDidMount() {
+
+        $(document).ready(function () {
+            $(document).click(function (event) {
+                var clickover = $(event.target);
+                var _opened = $(".navbar-collapse").hasClass("show");
+                console.log("opened:",_opened);
+                console.log("has_class:", clickover.hasClass("navbar-toggle"));
+                
+                if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+                    // alert();
+                    $(".navbar-collapse").removeClass('show');
+                }
+            });
+        });
+
         const change_language = this.props.change_language;
         const lang_select_emt = document.getElementById('language-select')
         const langs = ['eng', 'spa', 'ger'];

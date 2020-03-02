@@ -33,10 +33,11 @@ export default class ProfileBody extends Component {
         smooth_scroll();
         document.body.scrollTo(0, 0)
         document.getElementById("body-arrow-top").addEventListener('click', () => {
-            window.scrollBy(0, -100);
+            window.scrollBy(0, -Math.floor(window.innerHeight/1.3));
         });
         document.getElementById("body-arrow-bottom").addEventListener('click', () => {
-            window.scrollBy(0, 100);
+            window.scrollBy(0, Math.floor(window.innerHeight/1.3));
+            // alert();
         });
     }
 

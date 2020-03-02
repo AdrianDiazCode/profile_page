@@ -25,22 +25,22 @@ class Skills extends Component {
     }
 
     on_frontend_visibility(is_visible) {
-        if (is_visible) {
-            this.refs.arrow_left.style.display = "block";
-            this.refs.arrow_right.style.display = "none";
-        } else {
-            this.refs.arrow_left.style.display = "none";
-            this.refs.arrow_right.style.display = "block";
-        }
+        // if (is_visible) {
+        //     this.refs.arrow_left.style.display = "block";
+        //     this.refs.arrow_right.style.display = "none";
+        // } else {
+        //     this.refs.arrow_left.style.display = "none";
+        //     this.refs.arrow_right.style.display = "block";
+        // }
     }
 
 
     componentDidMount() {
         this.refs.arrow_left.addEventListener('click', () => {
-            this.refs.container.scrollBy(-10, 0);
+            this.refs.container.scrollBy(-500, 0);
         });
         this.refs.arrow_right.addEventListener('click', () => {
-            this.refs.container.scrollBy(10, 0);
+            this.refs.container.scrollBy(500, 0);
         });
     }
     render() {
