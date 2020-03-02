@@ -1,8 +1,8 @@
 export const description_text = {
     eng: "I'm a fullstack developer, \
-I'm very passionate for projects involving complex logic propblems. \
+I'm very passionate for projects involving complex logic. \
 Modeling and designing algorithms is my favorite thing to do. \
-I also really enjoy working with microservices architectures  \
+I also really enjoy working with microservice architectures  \
 and want to learn as much as I can in every project",
     spa: "Soy un desarrollador fullstack,  \
 Me apasionan los proyectos que involucran problemas complejos.  \

@@ -52,14 +52,8 @@
 
 .skills-section-title {
     /* padding-top: 10%; */
-    display: block;
+    /* display: block; */
     height: 10%;
-}
-
-@media(orientation:portrait) {
-    .skills-section-title {
-        height: 20%;
-    }
 }
 
 .skills-section-container {
