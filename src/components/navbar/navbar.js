@@ -59,7 +59,7 @@ class NavBar extends Component {
                                         {this.props.lang.toUpperCase()}
                                 </span>
                         </a>
-                        <div id="lang-dropdown-container" className="dropdown-menu bg-dark" aria-labelledby="lang-dropdown">
+                        <div id="lang-dropdown-container" className="dropdown-menu text-light bg-transparent" aria-labelledby="lang-dropdown">
                             <div id="langs-container">
                                 <a className="dropdown-item text-light" ref="englang">
                                     <span>
