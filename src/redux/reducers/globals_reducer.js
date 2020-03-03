@@ -21,7 +21,7 @@ const default_lang_dict = {
     "es-mx":"spa",
 }
 
-const default_lang = default_lang_dict[(navigator.language).toLowerCase()];
+var default_lang = default_lang_dict[(navigator.language).toLowerCase()];
 if(typeof default_lang == 'undefined'){
     default_lang = 'eng';
 }
