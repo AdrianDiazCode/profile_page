@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './contact_form.css';
 import TranslatableLabel from '../translatable_label/translatable_label';
+const axios = require('axios');
 
 const placeholders_dict = {
     eng: {
@@ -28,6 +29,34 @@ const placeholders_dict = {
 
 class ContactForm extends Component {
     state = {}
+
+    componentDidMount() {
+
+        const name_input = this.refs.name;
+        const email_input = this.refs.email;
+        const message_input = this.refs.message;
+        this.refs.sendbtn.addEventListener('click', function () {
+            const name = name_input.value
+            const email = email_input.value
+            const message = message_input.value
+            const data = {
+                name,
+                email,
+                message
+            };
+            console.log("sending:", data);
+
+            axios.post('http://adrianmailsender.000webhostapp.com', data)
+                .then(function (response) {
+                    alert('success!');
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        });
+    }
+
     render() {
         return (
             // <div className="container p-5">
@@ -37,34 +66,34 @@ class ContactForm extends Component {
                 <div className="contact-image">
                     <img src={require('./letter.png')} alt="rocket_contact" />
                 </div>
-                <form method="post">
+                <div>
                     <h3><TranslatableLabel is_typed={true} spa="Déjame un mensaje" eng="Drop me a message" ger="Schreib mir eine Nachricht" /></h3>
                     <div className="row">
                         <div className="col-md-6">
                             <div className="form-group">
-                                <input type="text" name="txtName" className="form-control" placeholder={placeholders_dict[this.props.lang].name} />
+                                <input type="text" ref="name" name="txtName" className="form-control" placeholder={placeholders_dict[this.props.lang].name} />
                             </div>
                             <div className="form-group">
-                                <input type="text" name="txtEmail" className="form-control" placeholder={placeholders_dict[this.props.lang].email} />
+                                <input type="text" ref="email" name="txtEmail" className="form-control" placeholder={placeholders_dict[this.props.lang].email} />
                             </div>
                             {/* <div className="form-group">
                                         <input type="text" name="txtPhone" className="form-control" placeholder="Your Phone Number *" value="" />
                                     </div> */}
                             <div className="form-group">
-                                <input type="submit" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
+                                <input type="button" ref="sendbtn" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
-                                <textarea name="txtMsg" className="form-control" placeholder={placeholders_dict[this.props.lang].message} style={{ width: "100%", height: "150px" }}></textarea>
+                                <textarea name="txtMsg" ref="message" className="form-control" placeholder={placeholders_dict[this.props.lang].message} style={{ width: "100%", height: "150px" }}></textarea>
                             </div>
                         </div>
                     </div>
 
                     <div className="email-address-message">
-                        <TranslatableLabel is_typed={true} spa="También me puedesescribir a eidiazcas@gmail.com" eng="You can also email me at eidiazcas@gmail.com" ger="Sie können mir auch eine E-Mail an eidiazcas@gmail.com senden" />
+                        <TranslatableLabel is_typed={true} spa="También me puedes escribir a eidiazcas@gmail.com" eng="You can also email me at eidiazcas@gmail.com" ger="Sie können mir auch eine E-Mail an eidiazcas@gmail.com senden" />
                     </div>
-                </form>
+                </div>
             </div>
             //     </div>
             // </div>

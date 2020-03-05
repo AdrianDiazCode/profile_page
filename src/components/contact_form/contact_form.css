@@ -16,7 +16,7 @@ body{
 .contact-image img{
   border-radius: 6rem;
   width: 11%;
-  margin-top: -3%;
+  margin-top: -30%;
   transform: rotate(29deg);
 }
 .contact-form form{
