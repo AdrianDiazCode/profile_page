@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/profile_page/static/css/main.83fd55c4.chunk.css",
-    "main.js": "/profile_page/static/js/main.60c54270.chunk.js",
-    "main.js.map": "/profile_page/static/js/main.60c54270.chunk.js.map",
+    "main.js": "/profile_page/static/js/main.930a790a.chunk.js",
+    "main.js.map": "/profile_page/static/js/main.930a790a.chunk.js.map",
     "runtime-main.js": "/profile_page/static/js/runtime-main.208dad69.js",
     "runtime-main.js.map": "/profile_page/static/js/runtime-main.208dad69.js.map",
     "static/js/2.1e31191c.chunk.js": "/profile_page/static/js/2.1e31191c.chunk.js",
     "static/js/2.1e31191c.chunk.js.map": "/profile_page/static/js/2.1e31191c.chunk.js.map",
     "index.html": "/profile_page/index.html",
-    "precache-manifest.b99f45b7cd7f97fa696a657873209c19.js": "/profile_page/precache-manifest.b99f45b7cd7f97fa696a657873209c19.js",
+    "precache-manifest.8c26f5435c6ba2cd0038c7d7fe1b67ac.js": "/profile_page/precache-manifest.8c26f5435c6ba2cd0038c7d7fe1b67ac.js",
     "service-worker.js": "/profile_page/service-worker.js",
     "static/css/main.83fd55c4.chunk.css.map": "/profile_page/static/css/main.83fd55c4.chunk.css.map",
     "static/media/Layout_butterflies_1.png": "/profile_page/static/media/Layout_butterflies_1.d7de6f9f.png",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.208dad69.js",
     "static/js/2.1e31191c.chunk.js",
     "static/css/main.83fd55c4.chunk.css",
-    "static/js/main.60c54270.chunk.js"
+    "static/js/main.930a790a.chunk.js"
   ]
 }
