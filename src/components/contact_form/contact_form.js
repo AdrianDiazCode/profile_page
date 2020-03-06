@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './contact_form.css';
 import TranslatableLabel from '../translatable_label/translatable_label';
-const axios = require('axios');
+import $ from 'jquery';
+import Swal from 'sweetalert2'
+// const axios = require('axios');
 
 const placeholders_dict = {
     eng: {
@@ -35,25 +37,68 @@ class ContactForm extends Component {
         const name_input = this.refs.name;
         const email_input = this.refs.email;
         const message_input = this.refs.message;
+        // let axiosConfig = {
+        //     headers: {
+        //         'Content-Type': 'application/json;charset=UTF-8',
+        //         "Access-Control-Allow-Origin": "*",
+        //     }
+        //   };
         this.refs.sendbtn.addEventListener('click', function () {
-            const name = name_input.value
-            const email = email_input.value
-            const message = message_input.value
+            const name = name_input.value;
+            const email = email_input.value;
+            const message = message_input.value;
+            const url = 'https://adrianmailsender.000webhostapp.com';
             const data = {
                 name,
                 email,
                 message
             };
             console.log("sending:", data);
-
-            axios.post('http://adrianmailsender.000webhostapp.com', data)
-                .then(function (response) {
-                    alert('success!');
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
+            if (name != "" && email != "" && message != "") {
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: data,
+                    success: () => {
+                        console.log('mensaje enviado');
+                        Swal.fire({
+                            // position: 'top-end',
+                            icon: 'success',
+                            title: 'Message sent!',
+                            // showConfirmButton: false,
+                            // timer: 1500
+                        })
+                    },
+                    error:()=>{
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'server problem',
+                        });
+                    }
+                    // dataType: "jsonp",
+                    // dataType: dataType
                 });
+
+                // axios({
+                //     method: 'get',
+                //     url: 'https://adrianmailsender.000webhostapp.com',
+                //     data
+                // });
+
+                // axios.post('https://adrianmailsender.000webhostapp.com', data, axiosConfig)
+                //     .then(function (response) {
+                //         alert('success!');
+                //         console.log(response);
+                //     })
+                //     .catch(function (error) {
+                //         console.log(error);
+                //     });
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'All fields are required',
+                });
+            }
         });
     }
 
