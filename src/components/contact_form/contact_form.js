@@ -113,26 +113,20 @@ class ContactForm extends Component {
                 </div>
                 <div>
                     <h3><TranslatableLabel is_typed={true} spa="Déjame un mensaje" eng="Drop me a message" ger="Schreib mir eine Nachricht" /></h3>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="form-group">
+                    <div className="row inputs-container">
+                      
+                            <div className="form-group name-input">
                                 <input type="text" ref="name" name="txtName" className="form-control" placeholder={placeholders_dict[this.props.lang].name} />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group email-input">
                                 <input type="text" ref="email" name="txtEmail" className="form-control" placeholder={placeholders_dict[this.props.lang].email} />
                             </div>
-                            {/* <div className="form-group">
-                                        <input type="text" name="txtPhone" className="form-control" placeholder="Your Phone Number *" value="" />
-                                    </div> */}
-                            <div className="form-group">
-                                <input type="button" ref="sendbtn" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
+                            <div className="form-group message-input">
                                 <textarea name="txtMsg" ref="message" className="form-control" placeholder={placeholders_dict[this.props.lang].message} style={{ width: "100%", height: "150px" }}></textarea>
                             </div>
-                        </div>
+                            <div className="form-group submit-input">
+                                <input type="button" ref="sendbtn" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
+                            </div>
                     </div>
 
                     <div className="email-address-message">
