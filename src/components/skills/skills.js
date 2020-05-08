@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './skills.css';
 import { ReactComponent as LeftArrowIcon } from './imgs/left_arrow.svg';
 import { ReactComponent as RightArrowIcon } from './imgs/right_arrow.svg';
+import Carousel from 'react-bootstrap/Carousel';
 
 const django_icon = require('./imgs/django.png');
 const laravel_icon = require('./imgs/laravel.svg');

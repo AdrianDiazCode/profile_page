@@ -21,10 +21,9 @@ function handle(delta, event) {
     console.log("delta:", delta);
     const divisor = 1
     var time = 1000/divisor;
-    var distance = window.innerHeight-1 ;
+    var distance = Math.floor( window.innerHeight-1) ;
     activate_snap_scroll(false)
     var emt = $('html, body').stop();
-    
     emt.animate({
         scrollTop: $(window).scrollTop() - (distance * current_direction)
     }, 
@@ -38,7 +37,7 @@ function handle(delta, event) {
         // console.log("scrolling ");
         // document.documentElement.dispatchEvent(new CustomEvent('scroll'));
         // window.scrollBy(0, + current_direction * 1);
-        window.scrollBy(0, - current_direction);
+        // window.scrollBy(0, - current_direction);
         // console.log(delta);
 
     });
@@ -59,7 +58,7 @@ function wheel(event) {
     if (event.wheelDelta) delta = event.wheelDelta / 120;
     else if (event.detail) delta = -event.detail / 3;
     else if (event.deltaY) delta = - event.deltaY/12;
-    // console.log("event:",event);
+    // console.log({event});
     // console.log("wheel-delta:",event.deltaY);
     handle(delta, event);
 }

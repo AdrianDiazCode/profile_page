@@ -8,8 +8,6 @@ import NavBar from "../navbar/navbar"
 import Content from '../content/content'
 import { ReactComponent as UpArrowIcon } from './imgs/up_arrow.svg';
 import { ReactComponent as DownArrowIcon } from './imgs/down_arrow.svg';
-const up_arrow = require('./imgs/up_arrow.svg');
-const down_arrow = require('./imgs/down_arrow.svg');
 function Arrows() {
     return (
         <div className="body-arrows-container">
@@ -22,7 +20,6 @@ function Arrows() {
         </div>
     )
 }
-
 
 export default class ProfileBody extends Component {
     constructor(props) {

@@ -5,14 +5,32 @@ import ScrollMagic from 'scrollmagic';
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import "./parallax_image.css"
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+var parallax_objects_array = [];
+var current_scroll_interval = 0;
 
 class ParallaxImage extends Component {
+
+    disable_on_scroll(){
+        parallax_objects_array.forEach(p => {
+            p.disable();
+        });
+        clearInterval(current_scroll_interval);
+        current_scroll_interval = setTimeout(() => {
+            parallax_objects_array.forEach(p => {
+                p.enable();
+            });
+        }, 100);
+    }
+
     componentDidMount() {
         var doc_height = document.body.clientHeight;
         var emt_height = document.getElementById(this.tween_id).offsetHeight;
         var scroll_height = doc_height;
         var emt = document.getElementById(this.props.id);
         var par = new Parallax(emt);
+        parallax_objects_array.push(par);
+        window.addEventListener('wheel', this.disable_on_scroll);
+        window.addEventListener('scroll', this.disable_on_scroll);
         var percentage = this.props.speed_perc/5;
         
         var perc_string = scroll_height * (100 - percentage) / 100
