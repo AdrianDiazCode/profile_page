@@ -54,7 +54,7 @@ class NavBar extends Component {
                         Adrian Diaz
                     </div>
                     <div id="sub-title">
-                        Developer
+                        <TranslatableLabel is_typed={true} spa="Desarrollador" eng="Developer" ger="Entwickler"></TranslatableLabel>
                     </div>
                 </a>
                 

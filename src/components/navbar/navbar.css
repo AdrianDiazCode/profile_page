@@ -55,8 +55,10 @@ html {
 }
 
 #lang-dropdown-container{
-    position: absolute;
-    margin-left: -180px;
+    position: fixed;
+    left: 0;
+    top:60px;
+    /* margin-left: -230%; */
 }
 
 
