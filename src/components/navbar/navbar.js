@@ -49,7 +49,14 @@ class NavBar extends Component {
         const current_lang_img = imgs_dict[this.props.lang]
         return (
             <nav className="navbar navbar-expand-md navbar-dark ">
-                <a className="navbar-brand" href="#">AdrianDiaz.com</a>
+                <a className="navbar-brand" href="#">
+                    <div id="title">
+                        Adrian Diaz
+                    </div>
+                    <div id="sub-title">
+                        Developer
+                    </div>
+                </a>
                 
                 <ul className="navbar-nav">
                     <li className="nav-item dropdown">

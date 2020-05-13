@@ -2,6 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+#title{
+    font-size: 1.2rem;
+}
+
+#sub-title{
+    margin-top: -5%;
+    font-size: 0.8rem;
+}
+
 .navbar {
     /* display: none; */
     position: fixed;

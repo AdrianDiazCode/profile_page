@@ -5,7 +5,8 @@ import { description_text } from './description_texts';
 import { connect } from 'react-redux';
 import change_visibility from '../../redux/actions/change_description_visibility';
 import './description.css';
-const pensativo_img = require('./imgs/pensativo.png');
+const pensativo_on_img = require('./imgs/pensativo_on.png');
+const pensativo_off_img = require('./imgs/pensativo_off.png');
 
 class Description extends Component {
     state = {}
@@ -39,9 +40,13 @@ class Description extends Component {
         if (is_visible) {
             this.description_texts_object = description_text;
             this.props.show();
+            document.getElementById('pensativo-on').classList.add('on');
             // this.setState({
             //     description_texts_object: description_text
             // });
+        } else {
+
+            document.getElementById('pensativo-on').classList.remove('on');
         }
     }
 
@@ -53,7 +58,7 @@ class Description extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         console.log("updating description");
-        
+
     }
 
     render() {
@@ -61,17 +66,20 @@ class Description extends Component {
         var is_typed = true;
         if (this.props.lang == this.previous_lang) {
             is_typed = false;
-            console.log("setting is_typed to false ",this.props.lang,this.previous_lang);
-        }else{
+            console.log("setting is_typed to false ", this.props.lang, this.previous_lang);
+        } else {
             // alert("lang changed");   
-            this.previous_lang = this.props.lang;         
+            this.previous_lang = this.props.lang;
         }
         return (
             <VisibilitySensor
                 onChange={this.handle_visibility_change.bind(this)}
             >
                 <div>
-                    <img className="show-on-bulb-on" id="description-photo" src={pensativo_img}></img>
+                    <div id="description-photo-container" className="show-on-bulb-on">
+                        <img className="description-photo" id="pensativo-off" src={pensativo_off_img}></img>
+                        <img className="description-photo" id="pensativo-on" src={pensativo_on_img}></img>
+                    </div>
                     <h3>
                         <TranslatableLabel is_typed={false} spa="¿Quién Soy?" eng="Who am I?" ger="Wer bin Ich?"></TranslatableLabel>
                     </h3>
