@@ -119,6 +119,11 @@ class NavBar extends Component {
                                 <TranslatableLabel is_typed={true} spa="Habilidades" eng="Skills" ger="Kompetenzen"></TranslatableLabel>
                             </a>
                         </li>
+                        <li className="nav-item" id="nav-experience">
+                            <a className="nav-link" href="#experience">
+                                <TranslatableLabel is_typed={true} spa="Experiencia" eng="Experience" ger="Erfahrung"></TranslatableLabel>
+                            </a>
+                        </li>
                         <li className="nav-item" id="nav-contact">
                             <a className="nav-link" href="#contact">
                                 <TranslatableLabel is_typed={true} spa="Contacto" eng="Contact" ger="Kontakt"></TranslatableLabel>

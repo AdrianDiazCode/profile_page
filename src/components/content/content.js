@@ -3,7 +3,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import TranslatableLabel from '../translatable_label/translatable_label';
 import ContactForm from '../contact_form/contact_form';
 import Description from '../description/description';
-import Services from '../skills/skills';
+import Skills from '../skills/skills';
+import Experience from '../experience/experience';
 import { presentation_text } from './content_texts';
 import "./content.css";
 
@@ -51,6 +52,14 @@ class Content extends Component {
             nav_emt.classList.remove('active');
         }
     }
+    on_experience_visibility(is_visible) {
+        const nav_emt = document.getElementById('nav-experience');
+        if (is_visible) {
+            nav_emt.classList.add('active');
+        }else{
+            nav_emt.classList.remove('active');
+        }
+    }
 
     on_contact_visibility(is_visible) {
         const nav_emt = document.getElementById('nav-contact');
@@ -87,9 +96,17 @@ class Content extends Component {
                 >
 
                     <section className="snap-element track" id="skills">
-                        <Services />
+                        <Skills />
                     </section>
                 </VisibilitySensor>
+                <VisibilitySensor
+                    onChange={this.on_experience_visibility.bind(this)}
+                >
+                    <section className="snap-element track" id="experience">
+                        <Experience />
+                    </section>
+                </VisibilitySensor>
+                
                 <VisibilitySensor
                     onChange={this.on_contact_visibility.bind(this)}
                 >

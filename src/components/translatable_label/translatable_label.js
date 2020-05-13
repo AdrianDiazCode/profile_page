@@ -57,8 +57,7 @@ class TranslatableLabel extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('updating translatable text to :',this.label);
-        
+        console.log('updating translatable text to :',this.label);   
         this.put_label()
     }
 

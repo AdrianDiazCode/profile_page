@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import TranslatableLabel from '../translatable_label/translatable_label';
-import VisibilitySensor from 'react-visibility-sensor';
 import { connect } from 'react-redux';
 import './skills.css';
-import { ReactComponent as LeftArrowIcon } from './imgs/left_arrow.svg';
-import { ReactComponent as RightArrowIcon } from './imgs/right_arrow.svg';
 import Carousel from 'react-bootstrap/Carousel';
 
 const django_icon = require('./imgs/django.png');
@@ -37,35 +34,33 @@ class Skills extends Component {
 
 
     componentDidMount() {
-        this.refs.arrow_left.addEventListener('click', () => {
-            this.refs.container.scrollBy(-500, 0);
-        });
-        this.refs.arrow_right.addEventListener('click', () => {
-            this.refs.container.scrollBy(500, 0);
-        });
+        // this.refs.arrow_left.addEventListener('click', () => {
+        //     this.refs.container.scrollBy(-500, 0);
+        // });
+        // this.refs.arrow_right.addEventListener('click', () => {
+        //     this.refs.container.scrollBy(500, 0);
+        // });
     }
     render() {
         return (
             <div className="skills-section">
-                <div className="skills-arrows-container">
-                    <div ref="arrow_left" className="skills-arrow-left skills-arrow">
-                        <LeftArrowIcon className="arrow-icon"></LeftArrowIcon>
-                    </div>
-                    <div ref="arrow_right" className="skills-arrow-right skills-arrow">
-                        <RightArrowIcon className="arrow-icon"></RightArrowIcon>
-                    </div>
-                </div>
                 <h3 className="skills-section-title">
                     <TranslatableLabel is_typed={true} eng="Some technologies I use" spa="Tecnologías que uso" ger="Technologien, die ich benutze"></TranslatableLabel>
 
                 </h3>
                 <div ref="container" className="skills-section-container">
-                    <div className="skills-container">
-                        <VisibilitySensor
-                            onChange={this.on_backend_visibility.bind(this)}
-                        >
-
-                            <div className="skill-category">
+                    <div 
+                        className="height-100"
+                    >
+                        <Carousel 
+                            className="height-100"
+                            interval={5000}
+                            // data-interval={false}
+                            // activeIndex={0}
+                            pause={true}
+                            // controls={false}
+                            >
+                            <Carousel.Item className="skill-category height-100">
                                 <div className="skill-title">
                                     <div className="skill-title-text">
                                         Backend
@@ -103,16 +98,12 @@ class Skills extends Component {
                                         <div className="tech-name">Linux/Windows environments</div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </VisibilitySensor>
-
-                        <VisibilitySensor
-                            onChange={this.on_frontend_visibility.bind(this)}
-                        >
+                            </Carousel.Item>
 
 
-                            <div className="skill-category">
+
+
+                            <Carousel.Item className="skill-category height-100">
                                 <div className="skill-title">
                                     <div className="skill-title-text">
                                         Frontend
@@ -150,9 +141,8 @@ class Skills extends Component {
                                         <div className="tech-name">D3JS</div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </VisibilitySensor>
+                            </Carousel.Item>
+                            </Carousel>
 
 
                     </div>

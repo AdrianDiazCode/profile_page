@@ -1,0 +1,20 @@
+.exp-thumbnail{
+    max-width: 80%;
+    max-height: 70%;
+}
+.exp-image{
+    max-width: 80%;
+    max-height: 50vh;
+}
+
+.exp-image-container{
+    height: 60vh;
+}
+
+.experience-container{
+    height: 100%;
+}
+
+.modal-backdrop {
+    background: none;
+ }
