@@ -42,6 +42,9 @@ h3{
     right: 0;
     margin: auto;
 }
+.arrow-icon:hover{
+    fill:white;
+}
 
 .body-arrow {
     position: absolute;
