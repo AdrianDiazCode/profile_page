@@ -1,6 +1,7 @@
 #description-photo-container{
     position: relative;
     width: 100%;
+    margin-bottom: 7%;
 }
 .description-photo{
     max-width: 50%;
