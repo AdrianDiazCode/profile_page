@@ -37,12 +37,6 @@ class ContactForm extends Component {
         const name_input = this.refs.name;
         const email_input = this.refs.email;
         const message_input = this.refs.message;
-        // let axiosConfig = {
-        //     headers: {
-        //         'Content-Type': 'application/json;charset=UTF-8',
-        //         "Access-Control-Allow-Origin": "*",
-        //     }
-        //   };
         this.refs.sendbtn.addEventListener('click', function () {
             const name = name_input.value;
             const email = email_input.value;
@@ -56,18 +50,17 @@ class ContactForm extends Component {
             };
             console.log("sending:", data);
             if (name != "" && email != "" && message != "") {
+
                 $.ajax({
                     type: "POST",
                     url: url,
                     data: data,
+                    dataType: "json",
                     success: () => {
                         console.log('mensaje enviado');
                         Swal.fire({
-                            // position: 'top-end',
                             icon: 'success',
                             title: 'Message sent!',
-                            // showConfirmButton: false,
-                            // timer: 1500
                         })
                     },
                     error:()=>{
@@ -76,25 +69,8 @@ class ContactForm extends Component {
                             title: 'server problem',
                         });
                     }
-                    // dataType: "jsonp",
-                    // dataType: dataType
                 });
-
-                // axios({
-                //     method: 'get',
-                //     url: 'https://adrianmailsender.000webhostapp.com',
-                //     data
-                // });
-
-                // axios.post('https://adrianmailsender.000webhostapp.com', data, axiosConfig)
-                //     .then(function (response) {
-                //         alert('success!');
-                //         console.log(response);
-                //     })
-                //     .catch(function (error) {
-                //         console.log(error);
-                //     });
-            }else{
+            } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'All fields are required',
@@ -115,19 +91,19 @@ class ContactForm extends Component {
                 <div>
                     <h3><TranslatableLabel is_typed={true} spa="Déjame un mensaje" eng="Drop me a message" ger="Schreib mir eine Nachricht" /></h3>
                     <div className="row inputs-container">
-                      
-                            <div className="form-group name-input">
-                                <input type="text" ref="name" name="txtName" className="form-control" placeholder={placeholders_dict[this.props.lang].name} />
-                            </div>
-                            <div className="form-group email-input">
-                                <input type="text" ref="email" name="txtEmail" className="form-control" placeholder={placeholders_dict[this.props.lang].email} />
-                            </div>
-                            <div className="form-group message-input">
-                                <textarea name="txtMsg" ref="message" className="form-control" placeholder={placeholders_dict[this.props.lang].message} style={{ width: "100%", height: "150px" }}></textarea>
-                            </div>
-                            <div className="form-group submit-input">
-                                <input type="button" ref="sendbtn" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
-                            </div>
+
+                        <div className="form-group name-input">
+                            <input type="text" ref="name" name="txtName" className="form-control" placeholder={placeholders_dict[this.props.lang].name} />
+                        </div>
+                        <div className="form-group email-input">
+                            <input type="text" ref="email" name="txtEmail" className="form-control" placeholder={placeholders_dict[this.props.lang].email} />
+                        </div>
+                        <div className="form-group message-input">
+                            <textarea name="txtMsg" ref="message" className="form-control" placeholder={placeholders_dict[this.props.lang].message} style={{ width: "100%", height: "150px" }}></textarea>
+                        </div>
+                        <div className="form-group submit-input">
+                            <input type="button" ref="sendbtn" name="btnSubmit" className="btnContact" value={placeholders_dict[this.props.lang].submit} />
+                        </div>
                     </div>
 
                     <div className="email-address-message">
