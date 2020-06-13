@@ -47,10 +47,11 @@ class ContactForm extends Component {
             const name = name_input.value;
             const email = email_input.value;
             const message = message_input.value;
-            const url = 'https://adrianmailsender.000webhostapp.com';
+            const url = 'https://formspree.io/meqrkroa';
             const data = {
-                name,
                 email,
+                _replyto: "eidiazcas@gmail.com",
+                name,
                 message
             };
             console.log("sending:", data);

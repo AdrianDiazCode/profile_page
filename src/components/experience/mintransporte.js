@@ -68,27 +68,37 @@ class Mintransporte extends Component {
                             className="height-100"
                             interval={5000}
                         >
-                            <Carousel.Item className="height-100">
+                            <Carousel.Item 
+                            // className="height-100"
+                            >
                                 <div className="exp-image-container text-center">
                                     <img className="exp-image" src={mintransporte_thumb} onClick={this.handleShow.bind(this)}></img>
                                 </div>
                             </Carousel.Item>
-                            <Carousel.Item className="height-100">
+                            <Carousel.Item 
+                            // className="height-100"
+                            >
                                 <div className="exp-image-container text-center">
                                     <img className="exp-image" src={mintransporte_thumb_2} onClick={this.handleShow.bind(this)}></img>
                                 </div>
                             </Carousel.Item>
-                            <Carousel.Item className="height-100">
+                            <Carousel.Item 
+                            // className="height-100"
+                            >
                                 <div className="exp-image-container text-center">
                                     <img className="exp-image" src={mintransporte_thumb_3} onClick={this.handleShow.bind(this)}></img>
                                 </div>
                             </Carousel.Item>
-                            <Carousel.Item className="height-100">
+                            <Carousel.Item 
+                            // className="height-100"
+                            >
                                 <div className="exp-image-container text-center">
                                     <img className="exp-image" src={mintransporte_thumb_4} onClick={this.handleShow.bind(this)}></img>
                                 </div>
                             </Carousel.Item>
-                            <Carousel.Item className="height-100">
+                            <Carousel.Item 
+                            // className="height-100"
+                            >
                                 <div className="exp-image-container text-center">
                                     <img className="exp-image" src={mintransporte_thumb_5} onClick={this.handleShow.bind(this)}></img>
                                 </div>
