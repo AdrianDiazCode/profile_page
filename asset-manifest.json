@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/profile_page/static/css/main.b668c5dd.chunk.css",
-    "main.js": "/profile_page/static/js/main.1b1530a8.chunk.js",
-    "main.js.map": "/profile_page/static/js/main.1b1530a8.chunk.js.map",
+    "main.css": "/profile_page/static/css/main.3feacb02.chunk.css",
+    "main.js": "/profile_page/static/js/main.02e4a5a0.chunk.js",
+    "main.js.map": "/profile_page/static/js/main.02e4a5a0.chunk.js.map",
     "runtime-main.js": "/profile_page/static/js/runtime-main.208dad69.js",
     "runtime-main.js.map": "/profile_page/static/js/runtime-main.208dad69.js.map",
-    "static/js/2.d3d0192d.chunk.js": "/profile_page/static/js/2.d3d0192d.chunk.js",
-    "static/js/2.d3d0192d.chunk.js.map": "/profile_page/static/js/2.d3d0192d.chunk.js.map",
+    "static/js/2.e2ce8b21.chunk.js": "/profile_page/static/js/2.e2ce8b21.chunk.js",
+    "static/js/2.e2ce8b21.chunk.js.map": "/profile_page/static/js/2.e2ce8b21.chunk.js.map",
     "index.html": "/profile_page/index.html",
-    "precache-manifest.1aa5336526afdaccc3388957acd59ccb.js": "/profile_page/precache-manifest.1aa5336526afdaccc3388957acd59ccb.js",
+    "precache-manifest.ef0974aec850fd8062633a5c8b9320d2.js": "/profile_page/precache-manifest.ef0974aec850fd8062633a5c8b9320d2.js",
     "service-worker.js": "/profile_page/service-worker.js",
-    "static/css/main.b668c5dd.chunk.css.map": "/profile_page/static/css/main.b668c5dd.chunk.css.map",
+    "static/css/main.3feacb02.chunk.css.map": "/profile_page/static/css/main.3feacb02.chunk.css.map",
     "static/media/1.png": "/profile_page/static/media/1.1ac7dacd.png",
     "static/media/2.png": "/profile_page/static/media/2.e38d65d5.png",
     "static/media/3.png": "/profile_page/static/media/3.2ae1fdc4.png",
@@ -29,6 +29,7 @@
     "static/media/down_arrow.aa9362ab.svg": "/profile_page/static/media/down_arrow.aa9362ab.svg",
     "static/media/eng.png": "/profile_page/static/media/eng.522cd947.png",
     "static/media/ger.png": "/profile_page/static/media/ger.a987d87d.png",
+    "static/media/img.png": "/profile_page/static/media/img.5099d2fe.png",
     "static/media/laravel.svg": "/profile_page/static/media/laravel.b8b31805.svg",
     "static/media/letter.png": "/profile_page/static/media/letter.6b6b08a5.png",
     "static/media/linux_windows.png": "/profile_page/static/media/linux_windows.17e2765d.png",
@@ -47,8 +48,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.208dad69.js",
-    "static/js/2.d3d0192d.chunk.js",
-    "static/css/main.b668c5dd.chunk.css",
-    "static/js/main.1b1530a8.chunk.js"
+    "static/js/2.e2ce8b21.chunk.js",
+    "static/css/main.3feacb02.chunk.css",
+    "static/js/main.02e4a5a0.chunk.js"
   ]
 }
